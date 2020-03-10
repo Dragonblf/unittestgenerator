@@ -15,14 +15,14 @@ public class C3
 public class InputClass
 {
     public string SomeProperty { get; }
-    public string SomeOutherProperty { get; set; }
+    public string SomeOtherProperty { get; set; }
     public string WriteOnlyProperty { set { } }
 }
 
 public class OutputClass
 {
     public string SomeProperty { get; set; }
-    public string SomeOutherProperty { get; set; }
+    public string SomeOtherProperty { get; set; }
     public string WriteOnlyProperty { get; set; }
 }
 	"""
@@ -33,4 +33,4 @@ public class OutputClass
 		And I expect it to contain the variable 'inputClass'
 		And I expect it to contain the statement 'var result = _testClass.Map(inputClass);'
 		And I expect it to contain the statement 'Assert.That(result.SomeProperty, Is.EqualTo(inputClass.SomeProperty));'
-		And I expect it to contain the statement 'Assert.That(result.SomeOutherProperty, Is.EqualTo(inputClass.SomeOutherProperty));'
+		And I expect it to contain the statement 'Assert.That(result.SomeOtherProperty, Is.EqualTo(inputClass.SomeOtherProperty));'

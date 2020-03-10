@@ -89,14 +89,14 @@ this.ScenarioInitialize(scenarioInfo);
 public class InputClass
 {
    public string SomeProperty { get; }
-   public string SomeOutherProperty { get; set; }
+   public string SomeOtherProperty { get; set; }
    public string WriteOnlyProperty { set { } }
 }
 
 public class OutputClass
 {
    public string SomeProperty { get; set; }
-   public string SomeOutherProperty { get; set; }
+   public string SomeOtherProperty { get; set; }
    public string WriteOnlyProperty { get; set; }
 }", ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 29
@@ -116,8 +116,8 @@ public class OutputClass
   testRunner.And("I expect it to contain the statement \'Assert.That(result.SomeProperty, Is.EqualTo" +
                     "(inputClass.SomeProperty));\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 36
-  testRunner.And("I expect it to contain the statement \'Assert.That(result.SomeOutherProperty, Is.E" +
-                    "qualTo(inputClass.SomeOutherProperty));\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+  testRunner.And("I expect it to contain the statement \'Assert.That(result.SomeOtherProperty, Is.Eq" +
+                    "ualTo(inputClass.SomeOtherProperty));\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
         }
